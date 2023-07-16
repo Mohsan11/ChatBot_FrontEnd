@@ -37,7 +37,7 @@ class ChatBot extends Component {
       this.setState({ OutputLanguage: "English" });
     }
     this.setState({ data: "Loading..." });
-    fetch("http://localhost:5000/chatbox", {
+    fetch("https://chatlangua--mohsanali3.repl.co/chatbox", {
       method: "post",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
