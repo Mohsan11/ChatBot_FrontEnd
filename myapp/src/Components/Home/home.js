@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Image from "../Images/blue chatbot background.png";
-function Home() {
+function Home({ onChangeChatBot }) {
   return (
     <div className="home-container">
       <img src={Image} alt="background" className="background-image" />
@@ -11,7 +11,9 @@ function Home() {
           multilingual chats, experience real-time text-to-speech responses, and
           enjoy a user-friendly interface with seamless design responsiveness.
           Get ready for an immersive and intelligent communication experience!{" "}
-          <a>ChatLingua</a>
+          <a href="#Chatbot" onClick={onChangeChatBot}>
+            ChatLingua
+          </a>
         </p>
       </div>
     </div>

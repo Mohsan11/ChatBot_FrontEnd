@@ -36,7 +36,7 @@ class App extends Component {
           onChangeGuide={this.onChangeGuide}
         />
         {page === "home" ? (
-          <Home />
+          <Home onChangeChatBot={this.onChangeChatBot} />
         ) : page === "chatbot" ? (
           <ChatBox />
         ) : page === "about us" ? (
