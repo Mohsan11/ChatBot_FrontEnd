@@ -1,12 +1,54 @@
+import React, { Component } from "react";
 import "./App.css";
 import ChatBox from "./Components/ChatBot/ChatBot";
+import Home from "./Components/Home/home";
+import Navigation from "./Components/Nav/Nav";
+import AppGuide from "./Components/Guide/guide";
+import AboutUs from "./Components/About US/About";
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      page: "home",
+    };
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <ChatBox />
-    </div>
-  );
+  onChangeHome = () => {
+    this.setState({ page: "home" });
+  };
+  onChangeGuide = () => {
+    this.setState({ page: "guide" });
+  };
+  onChangeChatBot = () => {
+    this.setState({ page: "chatbot" });
+  };
+  onChangeAboutUs = () => {
+    this.setState({ page: "about us" });
+  };
+  render() {
+    const { page } = this.state;
+    return (
+      <div className="App">
+        <Navigation
+          onChangeAboutUs={this.onChangeAboutUs}
+          onChangeChatBot={this.onChangeChatBot}
+          onChangeHome={this.onChangeHome}
+          onChangeGuide={this.onChangeGuide}
+        />
+        {page === "home" ? (
+          <Home />
+        ) : page === "chatbot" ? (
+          <ChatBox />
+        ) : page === "about us" ? (
+          <AboutUs />
+        ) : page === "guide" ? (
+          <AppGuide />
+        ) : (
+          <Home />
+        )}
+      </div>
+    );
+  }
 }
 
 export default App;

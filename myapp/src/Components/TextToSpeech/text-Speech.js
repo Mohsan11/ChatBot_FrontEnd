@@ -3,8 +3,6 @@ import "./TextToSpeech.css";
 class TextToSpeech extends Component {
   handlePlay = () => {
     const { Text, OutputLanguage } = this.props;
-    console.log(Text);
-
     if (!window.speechSynthesis) {
       console.log("Text-to-speech not supported in this browser.");
       return;
@@ -18,6 +16,7 @@ class TextToSpeech extends Component {
     utterance.text = Text;
 
     console.log("about to be played.");
+    console.log(OutputLanguage);
     window.speechSynthesis.speak(utterance);
   };
 
@@ -130,14 +129,8 @@ class TextToSpeech extends Component {
             <button className="btn" onClick={this.handlePause}>
               Pause
             </button>
-            <button className="btn" onClick={this.handleContinue}>
-              Continue
-            </button>
             <button className="btn" onClick={this.handleStop}>
               Stop
-            </button>
-            <button className="btn" onClick={this.handleRefresh}>
-              Refresh
             </button>
           </>
         )}
