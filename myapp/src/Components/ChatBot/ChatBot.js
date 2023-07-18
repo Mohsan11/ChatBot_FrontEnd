@@ -153,7 +153,7 @@ class ChatBot extends Component {
                 type="submit"
                 onClick={this.onClickSubmit}
               >
-                Submit
+                Send
               </button>
             </div>
           </form>
