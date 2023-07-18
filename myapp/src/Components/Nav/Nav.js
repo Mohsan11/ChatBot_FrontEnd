@@ -25,7 +25,7 @@ const Navigation = ({
         </li>
         <li>
           <a href="#Chatbot" onClick={onChangeChatBot}>
-            ChatBot
+            BotLangua
           </a>
         </li>
         <li>

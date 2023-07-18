@@ -7,12 +7,12 @@ function Home({ onChangeChatBot }) {
       <img src={Image} alt="background" className="background-image" />
       <div className="circle">
         <p>
-          ChatLingua - Your interactive conversation companion! Engage in
+          BotLangua - Your interactive conversation companion! Engage in
           multilingual chats, experience real-time text-to-speech responses, and
           enjoy a user-friendly interface with seamless design responsiveness.
           Get ready for an immersive and intelligent communication experience!{" "}
           <a href="#Chatbot" onClick={onChangeChatBot}>
-            ChatLingua
+            BotLangua
           </a>
         </p>
       </div>

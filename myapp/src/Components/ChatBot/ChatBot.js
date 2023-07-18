@@ -97,9 +97,9 @@ class ChatBot extends Component {
     return (
       <div>
         <div className="container">
-          <h1>ChatLingua</h1>
+          <h1>BotLangua</h1>
           <p>
-            Introducing ChatLangua with Text-to-Speech allows you to engage in
+            Introducing BotLangua with Text-to-Speech allows you to engage in
             conversations with an intelligent ChatBot. Enter your input text,
             choose your preferred input and output languages, and witness the
             ChatBot's quick and accurate responses. Utilize the built-in
